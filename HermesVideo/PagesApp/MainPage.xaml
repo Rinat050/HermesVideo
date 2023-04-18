@@ -8,7 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
-    <Grid>
-        
+    <Grid Background="#FFBACBD2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="15"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="15"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="15"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Frame x:Name="mainPageFrame" Grid.Column="1" Grid.Row="1"></Frame>
     </Grid>
 </Page>

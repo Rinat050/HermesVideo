@@ -1,0 +1,67 @@
+﻿<Page x:Class="HermesVideo.PagesApp.AuthorizationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HermesVideo.PagesApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthorizationPage" Loaded="Page_Loaded">
+
+    <Grid Background="#FFBACBD2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+            <ColumnDefinition Width="8*"></ColumnDefinition>
+            <ColumnDefinition Width="4*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FFFFF9F1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Авторизация" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  Grid.Column="0" Text="Логин:" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <TextBox x:Name="tbLogin" Grid.Column="1" HorizontalAlignment="Stretch"></TextBox>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="7*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Пароль:" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <PasswordBox x:Name="tbPassword" Grid.Column="1" HorizontalAlignment="Stretch"></PasswordBox>
+            </Grid>
+
+            <StackPanel Margin="10 0 0 0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Viewbox MaxHeight="20">
+                    <CheckBox x:Name="cbRemember"></CheckBox>
+                </Viewbox>
+                <TextBlock Text="Запомнить меня"></TextBlock>
+            </StackPanel>
+
+            <Button Grid.Row="4" Content="Войти" Click="BtnLogin_Click"></Button>
+
+            <TextBlock Grid.Row="5" VerticalAlignment="Center" FontSize="14" HorizontalAlignment="Center"> 
+                <Hyperlink NavigateUri="RegistrationPage.xaml">Регистрация</Hyperlink>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Page>

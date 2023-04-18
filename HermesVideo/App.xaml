@@ -4,6 +4,35 @@
              xmlns:local="clr-namespace:HermesVideo"
              StartupUri="WindowsApp/MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFE0DD46"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FFBACBD2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
+
+        <Style TargetType="PasswordBox">
+            <Setter Property="Background" Value="#FFBACBD2"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

@@ -24,7 +24,7 @@ namespace HermesVideo
         public MainWindow()
         {
             InitializeComponent();
-            mainWindowFrame.Navigate(new MainPage());
+            mainWindowFrame.Navigate(new AuthorizationPage());
         }
     }
 }
