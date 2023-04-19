@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HermesVideo.ADOApp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,14 +17,21 @@ using System.Windows.Shapes;
 namespace HermesVideo.PagesApp
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for ClientsListPage.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class ClientsListPage : Page
     {
-        public MainPage()
+        private List<Client> _allClients;
+        private List<Client> _currentClients;
+
+        private Predicate<Client> _filterQuery = x => true;
+        private Func<Client, object> _sortQuery = x => x.Id;
+
+        public ClientsListPage()
         {
             InitializeComponent();
-            mainPageFrame.NavigationService.Navigate(new ClientsListPage());
+
+            lvClients.ItemsSource = App.Connection.Client.ToList();
         }
     }
 }

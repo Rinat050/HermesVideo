@@ -71,6 +71,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PagesApp\ClientsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PagesApp\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +108,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ADOApp\Extentions\Client.cs" />
+    <Compile Include="ADOApp\Extentions\Tag.cs" />
     <Compile Include="ADOApp\Gender.cs">
       <DependentUpon>DBModel.tt</DependentUpon>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <Compile Include="PagesApp\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PagesApp\ClientsListPage.xaml.cs">
+      <DependentUpon>ClientsListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PagesApp\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>

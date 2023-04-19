@@ -16,10 +16,18 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="15"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="6*"></RowDefinition>
             <RowDefinition Height="15"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Frame x:Name="mainPageFrame" Grid.Column="1" Grid.Row="1"></Frame>
+        <Grid Grid.Column="1" Grid.Row="1" Background="#FFFFF9F1" Margin="5">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Image Source="/Images/VHS.png" VerticalAlignment="Center"></Image>
+                <TextBlock Text="Видеопрокат Hermes" FontSize="22" VerticalAlignment="Center" FontWeight="Bold"></TextBlock>
+            </StackPanel>
+        </Grid>
+        
+        <Frame x:Name="mainPageFrame" Grid.Column="1" Grid.Row="2" Margin="5"></Frame>
     </Grid>
 </Page>
